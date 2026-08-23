@@ -17,4 +17,4 @@ test('get started link', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
 });
 
-//npx playwright test tests/example.spec.ts
+// npx playwright test src/tests/example.spec.ts
