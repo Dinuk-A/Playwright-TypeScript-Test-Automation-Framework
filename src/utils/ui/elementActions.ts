@@ -45,7 +45,7 @@ export class ElementActions {
     await element.press('Enter');
   }
 
-  /** Key-by-key typing (what PLPHomePage.typeSearchQuery does) for inputs with debounce/onChange logic. */
+  /** Key-by-key typing for inputs with debounce/onChange logic. */
   async typeSequentially(element: Locator, text: string, delayMs = 50): Promise<void> {
     await element.click();
     await element.fill('');

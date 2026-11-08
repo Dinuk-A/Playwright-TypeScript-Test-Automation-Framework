@@ -42,8 +42,7 @@ export function fetchJsonValueByKey<T = unknown>(filePath: string, key: string):
 
 /**
  * Dotted-path lookup, e.g. fetchJsonValueByPath(file, 'en') or 'en[0].subCategories'.
- * NOTE: US_NAV_Utils (Java) calls JsonReader.fetchJsonValueByPath, which is missing from the
- * uploaded JsonReader.java; this is the TS equivalent. Returns the parsed value (not a JSON string).
+ * Returns the parsed value (not a JSON string) or undefined when the path does not exist.
  */
 export function fetchJsonValueByPath<T = unknown>(filePath: string, jsonPath: string): T | undefined {
   return getJsonValue(readJsonFileOnce(filePath), jsonPath) as T | undefined;

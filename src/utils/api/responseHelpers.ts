@@ -1,7 +1,7 @@
 import { APIResponse } from '@playwright/test';
 
 /**
- * Port of Java PWResponseHelpers. closeApiContext is not ported: the cartApi/productApi fixtures
+ * Port of Java PWResponseHelpers. closeApiContext is not ported: the apiFor fixture
  * dispose their contexts. Java getResponseAsJson returned the raw string; json() returns parsed data.
  */
 export function getStatusCode(response: APIResponse): number {

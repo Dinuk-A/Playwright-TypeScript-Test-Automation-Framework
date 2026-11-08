@@ -11,3 +11,4 @@ reports/
 .env
 allure-results
 desktop.ini
+allure-report/

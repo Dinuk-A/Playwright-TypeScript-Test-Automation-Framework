@@ -1,25 +1,7 @@
-import { env } from '../../config/env';
-
 export type Headers = Record<string, string>;
 
-// ---- project-specific (mirror headersFor / headersForMissingAuth / ...)
-export function tenantHeaders(tenant: string): Headers {
-  return { [env.api.tenantHeaderKey]: tenant };
-}
+/** Replace PWAPIUtils.getWithBearerToken / BasicAuth / ApiKey / Cookies / postWith*. */
 
-export function authHeaders(tenant: string): Headers {
-  return { ...tenantHeaders(tenant), ...bearerHeaders(env.authToken) };
-}
-
-export function invalidAuthHeaders(tenant: string): Headers {
-  return { ...tenantHeaders(tenant), ...bearerHeaders('invalid.token.value') };
-}
-
-export function missingTenantHeaders(): Headers {
-  return bearerHeaders(env.authToken);
-}
-
-// ---- generic (replace PWAPIUtils.getWithBearerToken / BasicAuth / ApiKey / Cookies / postWith*)
 /** Java's getWithBearerToken built "Bearer"+token with no space (bug); this inserts the space. */
 export function bearerHeaders(token: string): Headers {
   return { Authorization: `Bearer ${token}` };
