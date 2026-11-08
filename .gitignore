@@ -10,3 +10,4 @@ dist/
 reports/
 .env
 allure-results
+desktop.ini

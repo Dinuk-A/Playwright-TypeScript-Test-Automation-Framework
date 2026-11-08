@@ -1,0 +1,27 @@
+{
+  "ui": {
+    "baseUrl": "https://heimerle-meule-website.devk8s.hm-pm.net"
+  },
+  "api": {
+    "productBaseUrl": "https://product-api.devk8s.hm-pm.net",
+    "cartBaseUrl": "https://cart-api.devk8s.hm-pm.net",
+    "tenantHeaderKey": "X-Ecos-Tenant-Domain"
+  },
+  "tenants": {
+    "hm": "heimerle-meule-website",
+    "sempsa": "sempsa-website"
+  },
+  "endpoints": {
+    "productsSearch": "/api/Products/search",
+    "productById": "/api/Products",
+    "categories": "/api/Categories",
+    "cart": "/api/MyCart",
+    "cartItems": "/api/MyCart/items",
+    "cartDiscountCode": "/api/MyCart/discountCode",
+    "shippingMethods": "/api/MyCart/matching-shipping-methods"
+  },
+  "practice": {
+    "herokuappBaseUrl": "https://the-internet.herokuapp.com",
+    "jsonPlaceholderBaseUrl": "https://jsonplaceholder.typicode.com"
+  }
+}
